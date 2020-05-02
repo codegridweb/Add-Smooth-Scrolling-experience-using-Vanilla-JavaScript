@@ -1,0 +1,49 @@
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #161616;
+    color: #fff;
+    font-family: "Neue Machina";
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+}
+
+.smooth-scroll-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.content {
+    width: 80%;
+    margin: 160px auto;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+p {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.img {
+    width: 100%;
+    height: 300px;
+    background: url(hero-img.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin: 40px auto;
+}

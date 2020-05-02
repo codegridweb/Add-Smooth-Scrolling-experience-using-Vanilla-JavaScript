@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smooth Scroll</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="smooth-scroll-wrapper">
+            <div class="content">
+                <h1>
+                    :no time to explain
+                </h1>
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem animi ipsam itaque
+                    doloribus aliquid, veniam minus laborum doloremque quos ullam. Quas harum iure
+                    optio dolorem ea recusandae blanditiis ipsum praesentium.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+                    tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+                    voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+                    architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+                    laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+                    ratione suscipit!
+                </p>
+                <div class="img"></div>
+
+                <h1>:more than pretty screens</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto suscipit
+                    ducimus nostrum, aut minus eius impedit vero numquam est optio reprehenderit
+                    itaque quis eligendi quasi repellendus obcaecati neque dolor ipsam nulla
+                    praesentium voluptatum. Est assumenda ea voluptatibus! Eaque quo ducimus, unde
+                    maxime enim nesciunt debitis voluptatem fuga obcaecati? Aperiam?
+                </p>
+
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
+                    repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
+                </p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1>
+                    :no time to explain
+                </h1>
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem animi ipsam itaque
+                    doloribus aliquid, veniam minus laborum doloremque quos ullam. Quas harum iure
+                    optio dolorem ea recusandae blanditiis ipsum praesentium.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+                    tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+                    voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+                    architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+                    laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+                    ratione suscipit!
+                </p>
+                <div class="img"></div>
+
+                <h1>:more than pretty screens</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto suscipit
+                    ducimus nostrum, aut minus eius impedit vero numquam est optio reprehenderit
+                    itaque quis eligendi quasi repellendus obcaecati neque dolor ipsam nulla
+                    praesentium voluptatum. Est assumenda ea voluptatibus! Eaque quo ducimus, unde
+                    maxime enim nesciunt debitis voluptatem fuga obcaecati? Aperiam?
+                </p>
+
+                <div class="img"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
+                    repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
+                </p>
+            </div>
+        </div>
+        <script>
+            const body = document.body,
+                scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+                height = scrollWrap.getBoundingClientRect().height - 1,
+                speed = 0.04;
+
+            var offset = 0;
+
+            body.style.height = Math.floor(height) + "px";
+
+            function smoothScroll() {
+                offset += (window.pageYOffset - offset) * speed;
+
+                var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                scrollWrap.style.transform = scroll;
+
+                callScroll = requestAnimationFrame(smoothScroll);
+            }
+
+            smoothScroll();
+        </script>
+    </body>
+</html>
